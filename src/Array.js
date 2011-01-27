@@ -2,7 +2,7 @@
  * Function enhancements
  */
 module.exports = {
-	without: function(arr) {
+	/*without: function(arr) {
 		var args = arguments;
 		return arr.filter(function(x) {
 			var isIn = false;
@@ -14,7 +14,7 @@ module.exports = {
 	},
 	last: function(arr) {
 		return arr.length ? arr[arr.length - 1] : undefined;
-	},
+	},*/
 	/**
 	 * Shuffles the array
 	 * Implementation borrowed from Ryan Tenney: https://prototype.lighthouseapp.com/projects/8886/tickets/721-add-shuffle-method-to-arrays
@@ -31,5 +31,8 @@ module.exports = {
 			}
 		});
 		return shuffled;
+	},
+	copy: function(arr) {
+		return arr.concat();
 	}
 };

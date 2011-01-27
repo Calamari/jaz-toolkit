@@ -67,3 +67,13 @@ o.foo();
 
 var d = 432;
 for (var i in d) console.log(i);
+
+var a = {
+	foo: 42
+};
+
+jaz.Object.careExtend(a, {
+	foo: 23,
+	bla: 'blubb'
+});
+console.log(a);
