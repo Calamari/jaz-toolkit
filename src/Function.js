@@ -3,6 +3,7 @@
  */
 module.exports = {
 	methodize: function(method) {
+		//TODO: use objectDescriptor and hide them in for-in loop
 		return function() {
 			var args = [this];
 			for(var i=0, l=arguments.length; i<l; ++i) {

@@ -45,3 +45,21 @@ console.log(jaz.Array.without([1,2,3,4], 1, 3, 5));
 console.log(jaz.Array.last(["a","s","d","f"]));
 console.log(jaz.Array.shuffle(["a","s","d","f"]));
 
+console.log(jaz.Array.uniq([1, 3, 5, 3, 4, 5, 1]));
+console.log(jaz.Array.uniq(5));
+
+
+Object.defineProperty(Object.prototype, 'foo', {
+	value: function() { console.log(333); },
+	enumarable: false
+});
+Object.prototype.bla = 3;
+
+var x = {};
+x.foo();
+
+var o = [];
+o.foo();
+
+var d = 432;
+for (var i in d) console.log(i);
