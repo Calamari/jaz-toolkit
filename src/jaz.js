@@ -19,7 +19,29 @@ var jaz = {
 	'Array': enhanceObject(enhanceObject(require('./Array'), underscoreEnhance.Array), underscoreEnhance.Collection),
 	'Number': require('./Number'),
 	'Function': enhanceObject(require('./Function'), underscoreEnhance.Function),
-	'Object': enhanceObject(enhanceObject(require('./Object'), underscoreEnhance.Object), underscoreEnhance.Collection)
+	'Object': enhanceObject(enhanceObject(require('./Object'), underscoreEnhance.Object), underscoreEnhance.Collection),
+
+	/**
+	 * Adds all or only some methods to the appropriate Object.prototype
+	 * @params {String} which Which Property to should be enhanced?
+	 * @params {String|String[]} [only] If set mehtod will only enhance object with given methods
+	 */
+	enhancePrototype: function(which, only) {
+		if (!jaz[which]) return null;
+		var enhanceAll = typeof only === 'undefined';
+		only = Array.isArray(only) ? only : [only];
+
+		jaz.Object.each(jaz[which], function(value, key) {
+			if (enhanceAll || only.indexOf(key) !== -1) {
+				Object.defineProperty(global[which].prototype, key, {
+					value: jaz.Function.methodize(value),
+					enumarable: false
+				});
+			}
+		});
+	}
 };
+
+
 
 module.exports = jaz;

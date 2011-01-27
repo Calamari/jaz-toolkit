@@ -36,13 +36,17 @@ var f = jaz.Function.wrap(testFunc, function(origFunc, what) {
 
 f("wrapp me");
 
-Number.prototype['times'] = jaz.Function.methodize(jaz.Number.times);
+//Number.prototype['times'] = jaz.Function.methodize(jaz.Number.times);
+
+
+jaz.enhancePrototype('Number', 'times');
 
 (3).times(function(x) { console.log(x);});
 
+jaz.enhancePrototype('Array', ['without', 'last']);
 
-console.log(jaz.Array.without([1,2,3,4], 1, 3, 5));
-console.log(jaz.Array.last(["a","s","d","f"]));
+console.log([1,2,3,4].without(1, 3, 5));
+console.log(["a","s","d","f"].last());
 console.log(jaz.Array.shuffle(["a","s","d","f"]));
 
 console.log(jaz.Array.uniq([1, 3, 5, 3, 4, 5, 1]));
