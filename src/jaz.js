@@ -11,7 +11,7 @@ function enhanceObject(obj, methods) {
 var underscoreEnhance = {
 	Array: ['first', 'last', 'rest', 'compact', 'flatten', 'without', 'uniq', 'intersect', 'zip', 'indexOf', 'lastIndexOf', 'range'],
 	Collection: ['each', 'map', 'reduce', 'reduceRight', 'detect', 'select', 'reject', 'all', 'any', 'include', 'invoke', 'pluck', 'max', 'min', 'sortBy', 'sortedIndex', 'toArray', 'size'],
-	Object: ['keys', 'values', 'functions', 'extend', 'clone', 'tap', 'isEqual', 'isEmpty', 'isElement', 'isArray', 'isArguments', 'isFunction', 'isString', 'isNumber', 'isBoolean', 'isDate', 'isRegExp', 'isNaN', 'isNull', 'isUndefined'],
+	Object: ['values', 'functions', 'extend', 'clone', 'tap', 'isEqual', 'isEmpty', 'isElement', 'isArray', 'isArguments', 'isFunction', 'isString', 'isNumber', 'isBoolean', 'isDate', 'isRegExp', 'isNaN', 'isNull', 'isUndefined'],
 	Function: ['bind', 'bindAll', 'memoize', 'delay', 'defer', 'throttle', 'debounce', 'wrap', 'compose']
 };
 
@@ -20,6 +20,7 @@ var jaz = {
 	'Number': require('./Number'),
 	'Function': enhanceObject(require('./Function'), underscoreEnhance.Function),
 	'Object': enhanceObject(enhanceObject(require('./Object'), underscoreEnhance.Object), underscoreEnhance.Collection),
+	'String': require('./String'),
 
 	/**
 	 * Adds all or only some methods to the appropriate Object.prototype

@@ -1,6 +1,7 @@
 /**
  * Function enhancements
  */
+
 module.exports = {
 	methodize: function(method) {
 		//TODO: use objectDescriptor and hide them in for-in loop
@@ -30,5 +31,9 @@ module.exports = {
 			args.push(arguments[i]);
 		}
 		return wrapper.bind(this, args);
+	},
+	
+	nextTick: function(func) {
+		process.nextTick(func);
 	}
 };

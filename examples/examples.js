@@ -39,7 +39,7 @@ f("wrapp me");
 //Number.prototype['times'] = jaz.Function.methodize(jaz.Number.times);
 
 
-jaz.enhancePrototype('Number', 'times');
+jaz.enhancePrototype('Number');
 
 (3).times(function(x) { console.log(x);});
 
@@ -76,4 +76,33 @@ jaz.Object.careExtend(a, {
 	foo: 23,
 	bla: 'blubb'
 });
+
+console.log(Object.keys({
+	foo: 23,
+	blablubb: 'blubb'
+}));
+
+console.log(jaz.String.reverse("a.constructor"));
+console.log(o.constructor === Object);
+
+jaz.enhancePrototype('Function', 'nextTick');
+(function() { console.log(53); }).nextTick();
 console.log(a);
+
+console.log((5).toPaddedString(2));
+
+console.log((325).toPaddedString(2));
+
+console.log((6).toPaddedString(4, 2));
+
+
+jaz.enhancePrototype('String');
+
+console.log("bla bla blubb sex".toUpperCaseWords());
+
+console.log("bla_bla_blubb_".camelize());
+console.log("bla_bla_blubb_".camelize().underscore());
+
+var teststr = "bla bla blubb sex";
+console.log(teststr.wrap(5));
+console.log(teststr);
