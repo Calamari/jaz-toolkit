@@ -35,7 +35,7 @@ Or if you are fine with enhancing your prototypes, it get's simpler:
     // or enhancing your prototype with all available methods:
     jaz.enhancePrototype('String');
 
-## Exmaples
+## Examples
 
 See some examples in the examples directory.
 
