@@ -106,3 +106,6 @@ console.log("bla_bla_blubb_".camelize().underscore());
 var teststr = "bla bla blubb sex";
 console.log(teststr.wrap(5));
 console.log(teststr);
+
+console.log("max", jaz.Array.max([43,3,44,1]));
+console.log("min", jaz.Array.min([42,3,53,1,-7]));
