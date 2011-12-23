@@ -1,5 +1,5 @@
 
-var underscore = require('../vendor/underscore');
+var underscore = require('underscore');
 
 function enhanceObject(obj, methods) {
 	methods.forEach(function(method) {
