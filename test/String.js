@@ -4,9 +4,9 @@ var vows = require('vows'),
 
 
 //module.exports = 
-vows.describe('String')
+vows.describe('Jaz.String')
 .addBatch({
-	'Jaz.String has': {
+	'has method': {
 		topic: jaz.String,
 		
 		'beginsWith': function(S) {
