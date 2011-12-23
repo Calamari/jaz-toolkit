@@ -2,7 +2,7 @@
   "author": "Georg Tavonius <g.tavonius@gmail.com> (http://jaz-lounge.com)",
   "name": "jaz-toolkit",
   "description": "This is a collection of a lot of useful methods, that are missing in the JavaScript language itself.",
-  "version": "0.1",
+  "version": "0.1.0",
   "homepage": "https://github.com/Calamari/jaz-toolkit",
   "repository": {
     "url": "https://github.com/Calamari/jaz-toolkit"
@@ -11,7 +11,6 @@
     "node": "*"
   },
   "dependencies": {
-    "underscore": "*"
-  },
-  "devDependencies": {}
+    "underscore": "~1.2"
+  }
 }
