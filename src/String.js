@@ -49,5 +49,11 @@ module.exports = {
 	},
 	isEmail: function(str) {
 		return /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(str);
+	},
+	interpolate: function(str, data) {
+	  for (var key in data) {
+	    str = str.replace(new RegExp('#{' + key + '}', 'g'), data[key]);
+	  }
+	  return str;
 	}
 };
