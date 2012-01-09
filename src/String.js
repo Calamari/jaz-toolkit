@@ -28,7 +28,7 @@ module.exports = {
 		return ArrayMethods.map(str.words(), function(s) { return firstCharUpperCase(s); }).join(' ');
 	},
 	camelize: function(str) {
-		return ArrayMethods.map(str.split('_'), function(s) { return firstCharUpperCase(s); }).join('');
+		return firstCharLowerCase(ArrayMethods.map(str.split('_'), function(s) { return firstCharUpperCase(s); }).join(''));
 	},
 	underscore: function(str) {
 		return firstCharLowerCase(str).replace(/([A-Z])/g, '_$1').toLowerCase();
