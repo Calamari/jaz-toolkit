@@ -9,9 +9,9 @@ function enhanceObject(obj, methods) {
 }
 
 var underscoreEnhance = {
-	Array: ['first', 'last', 'rest', 'compact', 'flatten', 'without', 'uniq', 'intersect', 'zip', 'indexOf', 'lastIndexOf', 'range'],
+	Array: ['first', 'initial', 'last', 'rest', 'compact', 'flatten', 'without', 'union', 'uniq', 'difference', 'intersect', 'zip', 'indexOf', 'lastIndexOf', 'range'],
 	Collection: ['each', 'map', 'reduce', 'reduceRight', 'detect', 'select', 'reject', 'all', 'any', 'include', 'invoke', 'pluck', 'max', 'min', 'sortBy', 'sortedIndex', 'toArray', 'size'],
-	Object: ['values', 'functions', 'extend', 'clone', 'tap', 'isEqual', 'isEmpty', 'isElement', 'isArray', 'isArguments', 'isFunction', 'isString', 'isNumber', 'isBoolean', 'isDate', 'isRegExp', 'isNaN', 'isNull', 'isUndefined'],
+	Object: ['values', 'functions', 'extend', 'clone', 'defaults', 'tap', 'isEqual', 'isEmpty', 'isElement', 'isArray', 'isArguments', 'isFunction', 'isString', 'isNumber', 'isBoolean', 'isDate', 'isRegExp', 'isNaN', 'isNull', 'isUndefined'],
 	Function: ['bind', 'bindAll', 'memoize', 'delay', 'defer', 'throttle', 'debounce', 'wrap', 'compose']
 };
 
