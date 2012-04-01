@@ -21,6 +21,7 @@ var jaz = {
 	'Function': enhanceObject(require('./Function'), underscoreEnhance.Function),
 	'Object': enhanceObject(enhanceObject(require('./Object'), underscoreEnhance.Object), underscoreEnhance.Collection),
 	'String': require('./String'),
+	'Date': require('./Date'),
 
 	/**
 	 * Adds all or only some methods to the appropriate Object.prototype
